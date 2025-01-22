@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div style="padding: 50px">
+      <div>
+        <h3>Button</h3>
+
+        <button class="cs-btn">Button</button>
+        <button disabled class="cs-btn">Disabled</button>
+        <button class="cs-btn close"></button>
+      </div>
+      <div>
+        <h3>Hr</h3>
+
+        <hr class="cs-hr" />
+      </div>
+      <div>
+        <h3>Checkbox</h3>
+
+        <div class="cs-checkbox">
+          <input id="checkbox" type="checkbox" />
+          <label class="cs-checkbox__label" for="checkbox"
+            >Custom Checkbox</label
+          >
+        </div>
+      </div>
+      <div>
+        <h3>Input</h3>
+
+        <input class="cs-input" id="input" type="input" />
+        <label class="cs-input__label" for="input">Custom Checkbox</label>
+
+        <br />
+        <br />
+
+        <input type="text" value="John Doe" class="cs-input" />
+        <input type="text" disabled value="disabled" class="cs-input" />
+      </div>
+      <div>
+        <h3>Select</h3>
+
+        <label class="cs-select__label" for="cars">Choose a car:</label>
+        <select class="cs-select" name="cars" id="cars">
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="opel">Opel</option>
+          <option value="audi">Audi</option>
+        </select>
+      </div>
+      <div>
+        <h3>Radio Group</h3>
+
+        <fieldset class="cs-fieldset">
+          <legend>What is your favorite wild animal?</legend>
+          <div class="radio-wrapper">
+            <input type="radio" name="animal" id="elephant" />
+            <label for="elephant">Elephant</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" name="animal" id="monkey" />
+            <label for="monkey">Monkey</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" name="animal" id="cheetah" />
+            <label for="cheetah">Cheetah</label>
+          </div>
+          <div class="radio-wrapper">
+            <input type="radio" name="animal" id="giraffe" />
+            <label for="giraffe">Giraffe</label>
+          </div>
+        </fieldset>
+      </div>
+      <div>
+        <h3>Slider</h3>
+
+        <div class="cs-slider">
+          <div class="value">
+            <p>Dark</p>
+            <p>Light</p>
+          </div>
+          <div class="ruler"></div>
+          <input id="range" type="range" min="1" max="100" value="50" />
+          <label for="range">Elephant</label>
+        </div>
+      </div>
+      <div>
+        <h3>Dialog</h3>
+
+        <section>
+          <button
+            type="button"
+            class="cs-btn"
+            onclick="document.querySelector('.cs-dialog').showModal();"
+          >
+            Open dialog
+          </button>
+          <dialog class="cs-dialog">
+            <form method="dialog">
+              <div class="heading">
+                <div class="wrapper">
+                  <div class="icon"></div>
+                  <p class="text">Options</p>
+                </div>
+                <button class="cs-btn close"></button>
+              </div>
+              <div class="content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Distinctio ad suscipit aut asperiores laudantium error amet
+                sapiente et tempora numquam voluptates, velit sint quos
+                exercitationem unde obcaecati deleniti maiores officia natus
+                ipsa rem fuga commodi esse. Sunt repellendus ipsa illo a
+                accusantium consequuntur nihil dicta necessitatibus porro,
+                saepe, sed repudiandae!
+              </div>
+              <menu class="footer-btns">
+                <button class="cs-btn">OK</button>
+                <button class="cs-btn">Cancel</button>
+                <button class="cs-btn">Apply</button>
+              </menu>
+            </form>
+          </dialog>
+        </section>
+      </div>
+      <div>
+        <h3>Tooltip</h3>
+
+        <div class="cs-tooltip">
+          Hover over me
+          <span class="text">Tooltip text</span>
+        </div>
+      </div>
+      <div>
+        <h3>Progress Bar</h3>
+
+        <div class="cs-progress-bar">
+          <div style="width: 50%" class="bars"></div>
+        </div>
+      </div>
+      <div>
+        <h3>Tabs</h3>
+
+        <div class="cs-tabs">
+          <input
+            class="radiotab"
+            name="tabs"
+            tabindex="1"
+            type="radio"
+            id="tabone"
+            checked="checked"
+          />
+          <label class="label" for="tabone">Tab One</label>
+          <div class="panel" tabindex="1">
+            <h2>Tab One Content</h2>
+            <p>Tab content...</p>
+          </div>
+          <input
+            class="radiotab"
+            tabindex="1"
+            name="tabs"
+            type="radio"
+            id="tabtwo"
+          />
+          <label class="label" for="tabtwo">Tab Two</label>
+          <div class="panel" tabindex="1">
+            <h2>Tab Two Content</h2>
+            <p>Tab content...</p>
+          </div>
+          <input
+            class="radiotab"
+            tabindex="1"
+            name="tabs"
+            type="radio"
+            id="tabthree"
+          />
+          <label class="label" for="tabthree">Tab Three</label>
+          <div class="panel" tabindex="1">
+            <h2>Tab Three Content</h2>
+            <p>Tab content...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
