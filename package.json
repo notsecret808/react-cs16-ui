@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "build:css": "pnpm run build:autoprefix && pnpm run build:cleancss",
     "build:autoprefix": "postcss --use autoprefixer postcss-pxtorem --no-map --output css/cs16.css src/cs16.css",
-    "build:cleancss": "postcss --use cssnano -o css/cs16.min.css src/cs16.css"
+    "build:cleancss": "postcss --use cssnano --no-map -o css/cs16.min.css src/cs16.css"
   },
   "devDependencies": {
     "vite": "^6.0.5"
