@@ -9,6 +9,8 @@ document.querySelectorAll(".toggle-vision").forEach((button) => {
 });
 
 document.querySelectorAll(".inner .cs-btn").forEach((button) => {
+  let timeout = null;
+
   button.addEventListener("click", function () {
     const codeElement = this.closest(".inner").querySelector("code");
     const codeToCopy = codeElement.textContent;
@@ -16,7 +18,12 @@ document.querySelectorAll(".inner .cs-btn").forEach((button) => {
       .writeText(codeToCopy)
       .then(() => {
         this.textContent = "Copied!";
-        setTimeout(() => {
+
+        if (timeout !== null) {
+          clearTimeout(timeout);
+        }
+
+        timeout = setTimeout(() => {
           this.textContent = "Copy";
         }, 2000);
       })
