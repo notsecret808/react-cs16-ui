@@ -414,7 +414,20 @@ body {
       var(--border-dark);
   }
 
-  input::-webkit-slider-thumb,
+  input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 16px;
+    background: var(--bg);
+    cursor: pointer;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-color: var(--border-light) var(--border-dark) var(--border-dark)
+      var(--border-light);
+    border-radius: 0;
+  }
+
   input::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
