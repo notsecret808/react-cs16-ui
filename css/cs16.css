@@ -436,7 +436,8 @@ body {
       var(--border-dark);
   }
 
-  input::-webkit-slider-thumb {
+  input::-webkit-slider-thumb,
+  input::-moz-range-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 8px;
@@ -447,6 +448,7 @@ body {
     box-sizing: border-box;
     border-color: var(--border-light) var(--border-dark) var(--border-dark)
       var(--border-light);
+    border-radius: 0;
   }
 
   label {
